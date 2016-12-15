@@ -218,7 +218,7 @@ class point_action_01 {
 
 		$task 				= $task_controller->show( $_POST['task_id'] );
 		$point 				= $point_controller->show( $_POST['point_id'] );
-		$list_time 		=	$time_controller->index( $taks->id, array( 'parent' => $point->id, 'status' => -34070 ) );
+		$list_time 		=	$time_controller->index( $task->id, array( 'parent' => $point->id, 'status' => -34070 ) );
 
 		ob_start();
 		require( wpeo_template_01::get_template_part( WPEO_POINT_DIR, WPEO_POINT_TEMPLATES_MAIN_DIR, 'backend', 'window-point' ) );
